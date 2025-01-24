@@ -19,7 +19,7 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-image: url('logo.png');
+            background-image: url('logo.png'); background-color: rgba(255, 255, 255, 0.8);
             background-size: cover;
             background-position: center;
             position: relative;
@@ -28,7 +28,7 @@
         .slogan {
             font-size: 2.5rem;
             margin: 20px 0;
-            color: #ff6f61;
+            color: #2a9d8f;
             z-index: 2;
         }
 
@@ -44,7 +44,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             font-size: 4rem;
-            color: rgba(255, 255, 255, 0.2);
+            color: rgba(0, 0, 0, 0.5);
             z-index: 1;
             text-align: center;
             white-space: nowrap;
@@ -57,7 +57,7 @@
         }
 
         .contact a {
-            color: #ff6f61;
+            color: #264653;
             text-decoration: none;
             font-weight: bold;
         }
@@ -84,15 +84,16 @@
     </style>
 </head>
 <body>
+    <div class="countdown-background" id="countdown-background" style="font-size: 1.5rem; position: absolute; top: 10px; left: 50%; transform: translateX(-50%); color: rgba(0, 0, 0, 0.7);"></div>
     <div class="hero">
-        <div class="countdown-background" id="countdown-background"></div>
+        
         <div class="content">
-            <h1>Welcome to the Future of Love</h1>
-            <p class="slogan">Connecting Hearts with Strategy</p>
-            <p class="cta">Stay tuned for the launch!</p>
+            <h1 style="color: black;">Welcome to the Future of Love</h1>
+            <p class="slogan" style="color: black;">Connecting Hearts with Strategy</p>
+            <p class="cta" style="color: black;">Stay tuned for the launch!</p>
 
             <div class="contact">
-                <p>For more information, contact us at <a href="mailto:info@datinginlausanne.ch">info@datinginlausanne.ch</a></p>
+                <p style="color: black;">For more information, contact us at <a href="mailto:info@datinginlausanne.ch" style="text-decoration: underline; color: black;">info@datinginlausanne.ch</a></p>
                 <div class="social-icons">
                     <a href="https://www.instagram.com" target="_blank">
                         <img src="instagram.jpg" alt="Instagram">
@@ -103,6 +104,7 @@
     </div>
     <footer>
         &copy; 2025 Online Dating Project. Made with love and passion.
+    
     </footer>
 
     <script>
