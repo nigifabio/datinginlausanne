@@ -20,27 +20,37 @@
             justify-content: center;
             height: 100vh;
             background-color: #1a1a1a;
+            position: relative;
         }
 
         .logo {
             margin-bottom: 20px;
+            z-index: 2;
         }
 
         .slogan {
             font-size: 2.5rem;
             margin: 20px 0;
             color: #ff6f61;
+            z-index: 2;
         }
 
         .cta {
             font-size: 1.2rem;
             margin: 10px 0;
+            z-index: 2;
         }
 
-        .countdown {
-            font-size: 2rem;
-            margin: 20px 0;
-            color: #ff6f61;
+        .countdown-background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.2);
+            z-index: 1;
+            text-align: center;
+            white-space: nowrap;
         }
 
         .contact {
@@ -78,12 +88,12 @@
 </head>
 <body>
     <div class="hero">
+        <div class="countdown-background" id="countdown-background"></div>
         <img src="logo.png" alt="Project Logo" class="logo" width="200">
         <div class="content">
             <h1>Welcome to the Future of Love</h1>
             <p class="slogan">Connecting Hearts with Strategy</p>
-            <p class="cta">Stay tuned for the launch in:</p>
-            <p class="countdown" id="countdown"></p>
+            <p class="cta">Stay tuned for the launch!</p>
 
             <div class="contact">
                 <p>For more information, contact us at <a href="mailto:info@datinginlausanne.ch">info@datinginlausanne.ch</a></p>
@@ -109,7 +119,7 @@
             const timeDifference = launchDate - now;
 
             if (timeDifference <= 0) {
-                document.getElementById('countdown').innerHTML = "We have launched!";
+                document.getElementById('countdown-background').innerHTML = "We have launched!";
                 return;
             }
 
@@ -118,7 +128,7 @@
             const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
-            document.getElementById('countdown').innerHTML = 
+            document.getElementById('countdown-background').innerHTML = 
                 `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
         }
 
